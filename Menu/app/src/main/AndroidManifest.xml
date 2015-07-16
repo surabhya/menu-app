@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="menu.saryal.example.com.menu" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MenuPage"
+            android:label="@string/title_activity_front_page" >
+        </activity>
+        <activity
+            android:name=".DetailPage"
+            android:label="@string/title_activity_detail_page"
+            android:parentActivityName=".MenuPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="menu.saryal.example.com.menu.MenuPage" />
+        </activity>
+        <activity
+            android:name=".ItemOrdered"
+            android:label="@string/title_activity_item_ordered"
+            android:parentActivityName=".MenuPage" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="menu.saryal.example.com.menu.MenuPage" />
+        </activity>
+        <activity
+            android:name=".EditDetailPage"
+            android:label="@string/title_activity_edit_detail_page"
+            android:parentActivityName=".ItemOrdered" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="menu.saryal.example.com.menu.ItemOrdered" />
+        </activity>
+        <activity
+            android:name=".PaymentScreen"
+            android:label="@string/title_activity_payment_screen"
+            android:parentActivityName=".ItemOrdered" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="menu.saryal.example.com.menu.ItemOrdered" />
+        </activity>
+        <activity
+            android:name=".CloseScreen"
+            android:label="@string/title_activity_close_screen" >
+        </activity>
+    </application>
+
+</manifest>
